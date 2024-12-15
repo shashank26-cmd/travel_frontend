@@ -1,4 +1,3 @@
-
 # Tour Booking System
 
 This project is a web-based application for booking tour packages, generating PDF invoices, and downloading them. It uses Node.js, Express.js, MongoDB, and React.js.
@@ -19,17 +18,20 @@ This project is a web-based application for booking tour packages, generating PD
 1. Navigate to the backend repo:
    ```bash
    cd backend
-2 Install dependencies:
+
+2. Install dependencies:
 bash
 Copy code
 npm install
-3 Create a .env file in the backend directory:
+
+3. Create a .env file in the backend directory:
 plaintext
 Copy code
 PORT=5001
 MONGO_URI=<your-mongodb-uri>
 Replace <your-mongodb-uri> with your MongoDB connection string.
-4 Start the server:
+
+4. Start the server:
 bash
 Copy code
 npm start
@@ -40,113 +42,11 @@ and replace url in api/index.js
  to http://localhost:5001/
  (port u have mention in backend)
  and npm i
- now run npm run dev to start frontend
+ now run npm run dev to start frontent
 
 
 
-
-API Endpoints
-Booking Endpoints
-Create Booking: POST /api/bookings
-
-Request Body:
-json
-Copy code
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "phone": "1234567890",
-  "travelers": 2,
-  "packageId": "12345"
-}
-Response:
-json
-Copy code
-{
-  "message": "Booking created successfully!",
-  "bookingId": "1234567890",
-  "pdfUrl": "/api/bookings/invoice/1234567890"
-}
-Download Invoice: GET /api/bookings/invoice/:bookingId
-
-Returns a PDF invoice for the specified booking.
-Get All Bookings: GET /api/bookings
-
-Fetches all bookings.
-Get Booking by ID: GET /api/bookings/:id
-
-Fetches booking details by ID.
-Delete Booking: DELETE /api/bookings/:id
-
-Deletes a booking by ID.
-
-{
-			"name": "admin page",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				},
-				"description": "[http://localhost:5001/admin](http://localhost:5001/login)"
-			},
-			"response": []
-		},
-		{
-			"name": "admin-login",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "username",
-							"value": "admin",
-							"type": "string"
-						},
-						{
-							"key": "password",
-							"value": "password123",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"login"
-					]
-				}
-			},
-			"response": []
-		}
-	]
-}
-
-
-
-
-
-
-Technologies Used
+                                    Technologies Used
 Backend
 Node.js: Backend runtime.
 Express.js: API framework.
@@ -167,4 +67,5 @@ Future Enhancements
 Add user authentication.
 Email invoices directly to users.
 Improve UI/UX for better user experience.
+
  
