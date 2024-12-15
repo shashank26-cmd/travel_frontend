@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5001' });
+const API = axios.create({ baseURL: 'https://travel-backend-anz8.onrender.com' });
 
 export const getPackages = () => API.get('/api/packages/packages');
 export const getPackageById = (id) => API.get(`api/packages/packages/${id}`);
