@@ -1,3 +1,4 @@
+
 # Tour Booking System
 
 This project is a web-based application for booking tour packages, generating PDF invoices, and downloading them. It uses Node.js, Express.js, MongoDB, and React.js.
@@ -15,7 +16,7 @@ This project is a web-based application for booking tour packages, generating PD
 ---
 
 ### Backend Setup
-1. Navigate to the backend repo and clone it:
+1. Navigate to the backend repo:
    ```bash
    cd backend
 2 Install dependencies:
@@ -78,6 +79,73 @@ Fetches booking details by ID.
 Delete Booking: DELETE /api/bookings/:id
 
 Deletes a booking by ID.
+
+{
+			"name": "admin page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "[http://localhost:5001/admin](http://localhost:5001/login)"
+			},
+			"response": []
+		},
+		{
+			"name": "admin-login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+
+
+
+
+
+
 Technologies Used
 Backend
 Node.js: Backend runtime.
@@ -99,18 +167,4 @@ Future Enhancements
 Add user authentication.
 Email invoices directly to users.
 Improve UI/UX for better user experience.
-Copy code
-
-
-
-
-
-
-
-
-
-
-
-ChatGPT
-
  
